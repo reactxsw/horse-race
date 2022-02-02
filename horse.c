@@ -3,9 +3,9 @@
 #include <string.h>
 #include <stdlib.h>
 
-void delay(int number_of_seconds) {
-    clock_t start_time = clock();
-    while (clock() < start_time + 1000 * number_of_seconds);
+void delay(int seconds) {
+    clock_t start = clock();
+    while (clock() < start + 1000 * seconds);
 }
 
 int main() {
@@ -58,5 +58,4 @@ int main() {
     }
 
     return 0;
-
 }
